@@ -1,19 +1,18 @@
 #include "main.h"
-/**
- * string_toupper - change all lowercase to uppercase
- * @n: pointer
- * Return: n
- */
-char *string_toupper(char *n)
-{
-	int i;
+#include <stdio.h>
 
-	i = 0;
-	while (n[i] != '\0')
-	{
-		if (n[i] >= 'a' && n[i] <= 'z')
-			n[i] = n[i] - 32;
-		i++;
-	}
-	return (n);
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char str[] = "Look up!\n";
+    char *ptr;
+
+    ptr = string_toupper(str);
+    printf("%s", ptr);
+    printf("%s", str);
+    return (0);
 }
